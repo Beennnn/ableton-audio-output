@@ -29,7 +29,7 @@ an audience.
 ## Install
 
 ```bash
-git clone https://github.com/Beennnn/ableton-live-output.git
+git clone https://github.com/Beennnn/ableton-audio-output.git
 cd ableton-live-output && ./install.sh      # symlinks into ~/.local/bin
 ```
 
