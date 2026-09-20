@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="360" viewBox="0 0 1280 360" role="img" aria-label="ableton-audio-output — switch Ableton Live's audio output device from the command line">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1020"/>
+      <stop offset="0.55" stop-color="#141a35"/>
+      <stop offset="1" stop-color="#1c1030"/>
+    </linearGradient>
+    <linearGradient id="gM" gradientUnits="userSpaceOnUse" x1="70" y1="100" x2="256" y2="262">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="0.5" stop-color="#3b82f6"/>
+      <stop offset="1" stop-color="#6366f1"/>
+    </linearGradient>
+    <linearGradient id="gR" gradientUnits="userSpaceOnUse" x1="302" y1="0" x2="862" y2="0">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="0.5" stop-color="#3b82f6"/>
+      <stop offset="1" stop-color="#6366f1"/>
+    </linearGradient>
+    <linearGradient id="gB" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1280" y2="0">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="0.5" stop-color="#3b82f6"/>
+      <stop offset="1" stop-color="#6366f1"/>
+    </linearGradient>
+    <filter id="glow" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="360" fill="url(#bg)"/>
+  <rect x="0" y="352" width="1280" height="8" fill="url(#gB)" opacity="0.85"/>
+
+  <!-- what the repository is, said as a shape -->
+  <g transform="translate(70,100)" opacity="0.95">
+    <rect x="0" y="56" width="52" height="52" rx="10" fill="none" stroke="url(#gM)" stroke-width="2.5"/>
+    <path d="M14 70 v24 M22 64 v36 M30 72 v20 M38 66 v32"
+          fill="none" stroke="url(#gM)" stroke-width="2.5" stroke-linecap="round"/>
+    <g fill="none" stroke="url(#gM)" stroke-width="2.5">
+      <path d="M52 82 h30 C 100 82, 100 34, 118 34 h22"/>
+      <path d="M52 82 h30 C 100 82, 100 130, 118 130 h22" opacity="0.35"/>
+      <rect x="140" y="16" width="44" height="36" rx="8"/>
+      <rect x="140" y="112" width="44" height="36" rx="8" opacity="0.35"/>
+    </g>
+    <rect x="140" y="16" width="44" height="36" rx="8" fill="url(#gM)" filter="url(#glow)"/>  </g>
+
+  <!-- name, one-line subtitle, technical line -->
+  <g transform="translate(300,162)">
+    <text x="0" y="0" font-family="-apple-system, Segoe UI, sans-serif" font-size="50" font-weight="700" fill="#ffffff" letter-spacing="-0.5">ableton-audio-output</text>
+    <rect x="2" y="13" width="560" height="5" rx="2.5" fill="url(#gR)"/>
+    <text x="2" y="65" font-family="-apple-system, Segoe UI, sans-serif" font-size="24" fill="#aab4d8">Switch Ableton Live's audio output from the shell, on macOS.</text>
+    <text x="2" y="103" font-family="Menlo, Consolas, monospace" font-size="17" fill="#7f8bb5">an application preference — so neither the Live API nor OSC can reach it</text>
+  </g>
+</svg>

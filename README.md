@@ -1,3 +1,5 @@
+<p align="center"><img src="assets/banner.svg" alt="ableton-audio-output" width="100%"></p>
+
 # ableton-audio-output
 
 **Switch Ableton Live's audio output device from the command line, on macOS — in the
