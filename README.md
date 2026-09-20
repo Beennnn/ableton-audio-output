@@ -1,4 +1,4 @@
-# ableton-live-output
+# ableton-audio-output
 
 **Switch Ableton Live's audio output device from the command line, on macOS — in the
 running app, without quitting or restarting it.**
