@@ -3,6 +3,29 @@
 **Switch Ableton Live's audio output device from the command line, on macOS — in the
 running app, without quitting or restarting it.**
 
+## Why this exists, even if you drive Live over OSC
+
+**Live's API cannot change the audio output device. Not "not yet" — at all.**
+
+Measured on 2026-09-20 against [AbletonOSC](https://github.com/ideoforms/AbletonOSC), the
+most complete OSC surface for Live: **zero addresses touch the audio device.** The only two
+matches for `audio_output` are `has_audio_input` / `has_audio_output`, per-track booleans
+answering "does this track carry audio" — nothing to do with which interface Live plays
+through.
+
+That is not an oversight in AbletonOSC. The Live API models the **set**: tracks, clips,
+devices, the mixer. The output device is an **application preference**, and preferences sit
+outside that model. The same wall stands in front of the Cue output routing, which is also
+absent from the object model for the same reason.
+
+So when Live boots on a device that is gone — `No Device` restored from last session, the
+interface left in the other bag — no amount of OSC will move it. Something has to drive the
+preferences window. That is what this does, and why it stays useful next to a full OSC
+setup rather than being replaced by one.
+
+It is load-bearing, not a curiosity: [readyset](https://github.com/Beennnn/readyset) calls
+it to repair a rig whose sound has silently gone to the wrong place.
+
 ```console
 $ live-output --list
 No Device
